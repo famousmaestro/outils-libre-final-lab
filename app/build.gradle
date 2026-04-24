@@ -21,6 +21,12 @@ dependencies {
     implementation libs.guava
 }
 
+test {
+    testLogging {
+        events "passed", "failed"
+    }
+}
+
 testing {
     suites {
         // Configure the built-in test suite

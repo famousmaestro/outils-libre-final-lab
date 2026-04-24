@@ -11,8 +11,7 @@ public class App {
                 List.of(100.0, 50.0),
                 List.of(1, 2),
                 "VIP",
-                "SAVE10"
-        );
+                "SAVE10");
 
         System.out.println("Final Price: " + result);
     }
