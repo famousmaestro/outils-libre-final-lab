@@ -7,7 +7,7 @@ public class PricingEngine {
     private final DiscountService discountService = new DiscountService();
     private final TaxService taxService = new TaxService();
 
-    public double calculate(List<Double> prices,
+    public PricingResult calculate(List<Double> prices,
             List<Integer> quantities,
             String customerType,
             String discountCode) {
@@ -23,7 +23,7 @@ public class PricingEngine {
 
         double tax = taxService.calculateTax(afterDiscount);
 
-        return afterDiscount + tax;
+        return new PricingResult(subtotal, discount, tax, afterDiscount + tax);
     }
 
     private double calculateSubtotal(List<Double> prices, List<Integer> quantities) {

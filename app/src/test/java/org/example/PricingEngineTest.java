@@ -16,7 +16,7 @@ public class PricingEngineTest {
                 List.of(100.0),
                 List.of(1),
                 "REGULAR",
-                "");
+                "").getFinalPrice();
 
         assertTrue(result > 0);
     }
@@ -30,7 +30,7 @@ public class PricingEngineTest {
                 List.of(100.0),
                 List.of(1),
                 "REGULAR",
-                "SAVE10");
+                "SAVE10").getFinalPrice();
 
         assertTrue(result < 119.0);
     }
@@ -44,7 +44,7 @@ public class PricingEngineTest {
                 List.of(100.0),
                 List.of(1),
                 "VIP",
-                "");
+                "").getFinalPrice();
 
         assertTrue(result < 119.0);
     }
